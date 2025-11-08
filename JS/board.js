@@ -1,3 +1,8 @@
+function PCEINDEX(pce , pceNum){
+        return (pce*10 + pceNum);
+        // pceindex is the index sused to find a pieces's postion inside the picelist quickly
+}
+
 var GameBoard = {};
 
 GameBoard.pieces = new Array(BRD_SQ_NUM);
@@ -24,4 +29,8 @@ GameBoard.ply = 0;
 */
 
 GameBoard.castlePerm = 0;
+GameBoard.material = new Array(2); //white, black material of pieces
+
+GameBoard.pceNum = new Array(13);  // a names list of pice constants, so that arrays can index by piece type.
+GameBoard.pList = new Array(14 * 10); //for each piece type a list of the squares where pieces of that type currently sit.
 
